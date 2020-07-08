@@ -17,9 +17,9 @@ export class AppComponent {
   title = 'Decoder';
   query: string ;
   artists: object ;
-  // tslint:disable-next-line:typedef
-  showArtist(item){
+  showArtist(item): void {
     this.query = item.name;
+    item.highlight = !item.highlight;
   }
   constructor() {
     this.query =  '';
